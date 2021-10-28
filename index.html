@@ -10,7 +10,7 @@
     <script src="https://kit.fontawesome.com/2e2e5445c0.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav class="w-full fixed">
+    <nav class="w-full fixed z-30">
         <section id="toolbar" class="h-9 bg-purple-600 flex flex-row items-center justify-center md:justify-end text-green-200 md:h-8 md:pr-12">
             <i class="far fa-user text-xs text-white"></i><a href="#" class="text-white font-medium px-3">Iniciar Sesión</a>  |
             <a href="#" class="text-white font-medium px-3">Registrarse</a>
@@ -29,25 +29,54 @@
         </div>
     </nav>
 
-    <section id="home-hero" class="w-full h-4/6 pt-40 flex flex-col items-center justify-center gap-y-7">
-        <h1 class="text-white text-center font-bold text-6xl drop-shadow-2xl">Todas las playlists en un solo lugar</h1>
-        <p class="text-white text-center font-light text-4xl">Encuentra tu mood ideal, en el momento que quieras.</p>
+    <section id="home-hero" class="relative flex items-center justify-center h-screen mb-12 overflow-hidden">
+        <div id="hero-content" class="z-30 w-full flex flex-col items-center justify-center gap-y-7">
+            <h1 class="text-white text-center font-bold text-6xl drop-shadow-2xl">Todas las playlists en un solo lugar</h1>
+            <p class=" text-white text-center font-light text-4xl">Encuentra tu mood ideal, en el momento que quieras.</p>
         
-        <div id="search-bar" class="p-8">
-            <div class="bg-white flex items-center rounded-full shadow-xl">
-              <input class="rounded-l-full w-full py-4 px-6 text-gray-700 focus:outline-none" id="search" type="text" placeholder="Encuentra tu playlist ideal">
-              
-              <div class="p-4">
-                <button class="bg-blue-500 text-white rounded-full p-2 hover:bg-blue-400 focus:outline-none w-12 h-12 flex items-center justify-center">
-                    <i class="fas fa-search"></i>
-                </button>
+            <div id="search-bar" class="relative p-8">
+                <div class="bg-white flex items-center rounded-full shadow-xl">
+                    <input class="rounded-l-full w-full py-4 px-6 text-gray-700 focus:outline-none" id="search" type="text" placeholder="Encuentra tu playlist ideal">
+                
+                <div class="p-4">
+                    <button class="bg-blue-500 text-white rounded-full p-2 hover:bg-blue-400 focus:outline-none w-12 h-12 flex items-center justify-center">
+                        <i class="fas fa-search"></i>
+                    </button>
                 </div>
-              </div>
+                </div>
             </div>
-          </div>
+        </div>
 
-        
+        <video autoplay loop muted class="absolute z-10 w-auto min-w-full min-h-full max-w-none">
+            <source src="http://pankoala.space/hero-bg.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+
     </section>
+    <section id="tags-row" class="h-40 w-1/2 flex flex-col md:flex-row items-center justify-center bg-white rounded-lg -mt-32 mx-auto space-x-7 relative z-30 shadow-xl">
+        <div id="tag1" class="flex flex-col h-40 w-40 items-center justify-center">
+            <img src="assets/img/happy.png" alt="Happy Mood" class="h-20">
+            <p class="mt-5">Happy</p>
+        </div>
+        <div id="tag1" class="flex flex-col h-40 w-40 items-center justify-center">
+            <img src="assets/img/meh.png" alt="Happy Mood" class="h-20">
+            <p class="mt-5">Meh</p>
+        </div>
+        <div id="tag1" class="flex flex-col h-40 w-40 items-center justify-center">
+            <img src="assets/img/dance.png" alt="Happy Mood" class="h-20">
+            <p class="mt-5">¡A bailar!</p>
+        </div>
+        <div id="tag1" class="flex flex-col h-40 w-40 items-center justify-center">
+            <img src="assets/img/rainy.png" alt="Happy Mood" class="h-20">
+            <p class="mt-5">Rainy</p>
+        </div>
+        <div id="tag1" class="flex flex-col h-40 w-40 items-center justify-center">
+            <img src="assets/img/winter.png" alt="Happy Mood" class="h-20">
+            <p class="mt-5">Invernal</p>
+        </div>
+    </section>
+
+    </div>
     
     
 

@@ -1,10 +1,8 @@
 body{
-    background-color: aquamarine;
+    background-color: #181818;
     height: 100vh;
 }
 #home-hero{
+    height: 100vh;
     background-color: #000000;
-    background-image: url("../../assets/img/hero-bg.png");
-    background-position: right;
-    background-repeat: no-repeat;
 }
