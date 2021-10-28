@@ -2,3 +2,9 @@ body{
     background-color: aquamarine;
     height: 100vh;
 }
+#home-hero{
+    background-color: #000000;
+    background-image: url("../../assets/img/hero-bg.png");
+    background-position: right;
+    background-repeat: no-repeat;
+}
