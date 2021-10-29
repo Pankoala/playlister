@@ -1,8 +1,17 @@
 body{
-    background-color: #181818;
+    background-color: #f3f4f6;
     height: 100vh;
 }
 #home-hero{
     height: 100vh;
     background-color: #000000;
+}
+#liked-title{
+    font-family: Archivo;
+}
+#more{
+    background-color: #53b7f9;
+}
+#intro-title{
+    font-family: Archivo;
 }
