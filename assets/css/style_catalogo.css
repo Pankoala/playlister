@@ -1,5 +1,10 @@
 body{
+    background-color: #f3f4f6;
     height: 100vh;
+}
+#home-hero{
+    height: 50vh;
+    background-color: #06c9fa;
 }
 #liked-title{
     font-family: Archivo;
@@ -7,6 +12,4 @@ body{
 #intro-title{
     font-family: Archivo;
 }
-#rankings-title{
-    font-family: Archivo;
-}
+
