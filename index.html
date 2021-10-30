@@ -8,31 +8,35 @@
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link href="/assets/css/main.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/2e2e5445c0.js" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
 </head>
 <body class="bg-gray-100">
     <nav class="w-full fixed z-40">
-        <section id="toolbar" class="h-9 bg-purple-600 flex flex-row items-center justify-center md:justify-end text-green-200 md:h-8 md:pr-12">
+        <div id="toolbar" class="h-9 bg-purple-600 flex flex-row items-center justify-center md:justify-end text-green-200 md:h-8 md:pr-12">
             <i class="far fa-user text-xs text-white"></i><a href="#" class="text-white font-medium px-3">Iniciar Sesión</a>  |
             <a href="#" class="text-white font-medium px-3">Registrarse</a>
             <a href="#" class="bg-white text-purple-800 font-semibold rounded-full px-3">Publicar Playlist <i class="fas fa-music text-xs text-indigo-400"></i></a>
-        </section>
+        </div>
 
         <div id="menu-bar" class="h-32 bg-white flex flex-col justify-center items-center md:h-20 md:flex-row md:justify-between md:px-7">
              <a href="#"><img src="assets/img/ph-logo-hor.png" alt="Plyst Huntr Logo Desk" class="h-16"></a>
              
              <div id="links" class="flex flex-row items-center justify-center pr-8 pt-4 md:pt-0">                    
-                <a href="#" class="font-semibold transform transition duration-200 hover:text-pink-500 pl-10">Home</a>
-                <a href="/catalogo.html" class="font-semibold transform transition duration-200 hover:text-pink-500 pl-10">Catálogo</a>
+                <a href="index.html" class="font-semibold transform transition duration-200 hover:text-pink-500 pl-10">Home</a>
+                <a href="catalogo.html" class="font-semibold transform transition duration-200 hover:text-pink-500 pl-10">Catálogo</a>
                 <a href="#" class="font-semibold transform transition duration-200 hover:text-pink-500 pl-10">Rankings</a>
                 <a href="#" class="font-semibold transform transition duration-200 hover:text-pink-500 pl-10">Huntr</a>
+                <a href="https://www.facebook.com/" target="_blank" class="font-semibold transform transition duration-200 hover:text-pink-500 pl-10"><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href="https://twitter.com/" target="_blank"  class="font-semibold transform transition duration-200 hover:text-pink-500 pl-10"><ion-icon name="logo-twitter"></ion-icon></a>
             </div>
         </div>
     </nav>
 
-    <section id="home-hero" class="relative flex items-center justify-center h-screen overflow-hidden md:mb-12">
+    <header class="relative flex items-center justify-center h-screen mb-12 overflow-hidden">
         <div id="hero-content" class="z-30 w-full flex flex-col items-center justify-center gap-y-7 mt-52">
             <h1 class="text-white text-center font-bold text-6xl drop-shadow-2xl">Todas las playlists en un solo lugar</h1>
             <p class=" text-white text-center font-light text-4xl px-4">Encuentra tu mood ideal, en el momento que quieras.</p>
@@ -51,11 +55,11 @@
         </div>
 
         <video autoplay loop muted class="absolute z-10 w-auto min-w-full min-h-full max-w-none">
-            <source src="http://pankoala.space/hero-bg.mp4" type="video/mp4" />
+            <source src="assets/vids/hero-bg.mp4" type="video/mp4" />
             Your browser does not support the video tag.
         </video>
 
-    </section>
+    </header>
 
     <section id="tags-row" class="w-1/2 relative z-30 flex flex-col items-center justify-center bg-white rounded-lg mx-auto shadow-xl md:flex-row md:h-40 mt-10 md:-mt-32 md:space-x-7">
         
@@ -668,30 +672,30 @@
 
     </section>
 
-    <div id="rankings" class="w-full h-4/5 my-32 bg-gradient-to-r from-pink-500 to-blue-400">
+    <section id="rankings" class="w-full h-4/5 my-32 bg-gradient-to-r from-pink-500 to-blue-400">
         <div id="rankings-title" class="text-white font-bold text-3xl text-center mt-32 pt-20">Rankings</div>
 
-        <div id="ranks-row" class="w-100 flex grid grid-cols-1 gap-y-7 items-center justify-center md:grid-cols-3 md:justify-around md:gap-10 mx-1 md:ml-36 md:mr-36 mt-20">
+        <div id="ranks-row" class="w-100 flex grid grid-cols-1 gap-y-7 items-center justify-center md:grid-cols-3 md:justify-around md:gap-10 mt-20 mb-20 mx-1 md:ml-36 md:mr-36 ">
             <div id="rank-col1" class="flex flex-col items-center justify-start0">
                 <h1 class="font-bold text-center text-white">Las más bailables</h1>
                 <div id="ranker-1" class="w-auto flex flex-col md:flex-row items-center justify-start mt-7 gap-x-7">
-                    <img id="rank-art" class="w-16 h-16" src="assets/img/album1.png">
+                    <img id="rank-art" class="w-16 h-16 transition transform duration-250 hover:scale-105 hover:shadow-2xl" src="assets/img/album1.png">
                     <p class="text-base text-white">Nombre de playlist</p>
                 </div>
                 <div id="ranker-2" class="w-auto flex flex-col md:flex-row items-center justify-start mt-7 gap-x-7">
-                    <img id="rank-art" class="w-16 h-16" src="assets/img/album1.png">
+                    <img id="rank-art" class="w-16 h-16 transition transform duration-250 hover:scale-105 hover:shadow-2xl" src="assets/img/album1.png">
                     <p class="text-base text-black text-white">Nombre de playlist</p>
                 </div>
                 <div id="ranker-3" class="w-auto flex flex-col md:flex-row items-center justify-start mt-7 gap-x-7">
-                    <img id="rank-art" class="w-16 h-16" src="assets/img/album1.png">
+                    <img id="rank-art" class="w-16 h-16 transition transform duration-250 hover:scale-105 hover:shadow-2xl" src="assets/img/album1.png">
                     <p class="text-base text-white">Nombre de playlist</p>
                 </div>
                 <div id="ranker-4" class="w-auto flex flex-col md:flex-row items-center justify-start mt-7 gap-x-7">
-                    <img id="rank-art" class="w-16 h-16" src="assets/img/album1.png">
+                    <img id="rank-art" class="w-16 h-16 transition transform duration-250 hover:scale-105 hover:shadow-2xl" src="assets/img/album1.png">
                     <p class="text-base text-white">Nombre de playlist</p>
                 </div>
                 <div id="ranker-5" class="w-auto flex flex-col md:flex-row items-center justify-start mt-7 gap-x-7">
-                    <img id="rank-art" class="w-16 h-16" src="assets/img/album1.png">
+                    <img id="rank-art" class="w-16 h-16 transition transform duration-250 hover:scale-105 hover:shadow-2xl" src="assets/img/album1.png">
                     <p class="text-base text-white">Nombre de playlist</p>
                 </div>
             </div>
@@ -699,23 +703,23 @@
             <div id="rank-col2" class="flex flex-col items-center justify-start0">
                 <h1 class="font-bold text-white text-center">Máximo zen</h1>
                 <div id="ranker-1" class="w-auto flex flex-col md:flex-row items-center justify-start mt-7 gap-x-7">
-                    <img id="rank-art" class="w-16 h-16" src="assets/img/album1.png">
+                    <img id="rank-art" class="w-16 h-16 transition transform duration-250 hover:scale-105 hover:shadow-2xl" src="assets/img/album1.png">
                     <p class="text-base text-white text-black">Nombre de playlist</p>
                 </div>
                 <div id="ranker-2" class="w-auto flex flex-col md:flex-row items-center justify-start mt-7 gap-x-7">
-                    <img id="rank-art" class="w-16 h-16" src="assets/img/album1.png">
+                    <img id="rank-art" class="w-16 h-16 transition transform duration-250 hover:scale-105 hover:shadow-2xl" src="assets/img/album1.png">
                     <p class="text-base text-white text-black">Nombre de playlist</p>
                 </div>
                 <div id="ranker-3" class="w-auto flex flex-col md:flex-row items-center justify-start mt-7 gap-x-7">
-                    <img id="rank-art" class="w-16 h-16" src="assets/img/album1.png">
+                    <img id="rank-art" class="w-16 h-16 transition transform duration-250 hover:scale-105 hover:shadow-2xl" src="assets/img/album1.png">
                     <p class="text-base text-white text-black">Nombre de playlist</p>
                 </div>
                 <div id="ranker-4" class="w-auto flex flex-col md:flex-row items-center justify-start mt-7 gap-x-7">
-                    <img id="rank-art" class="w-16 h-16" src="assets/img/album1.png">
+                    <img id="rank-art" class="w-16 h-16 transition transform duration-250 hover:scale-105 hover:shadow-2xl" src="assets/img/album1.png">
                     <p class="text-base text-white text-black">Nombre de playlist</p>
                 </div>
                 <div id="ranker-5" class="w-auto flex flex-col md:flex-row items-center justify-start mt-7 gap-x-7">
-                    <img id="rank-art" class="w-16 h-16" src="assets/img/album1.png">
+                    <img id="rank-art" class="w-16 h-16 transition transform duration-250 hover:scale-105 hover:shadow-2xl" src="assets/img/album1.png">
                     <p class="text-base text-white text-black">Nombre de playlist</p>
                 </div>
             </div>
@@ -723,28 +727,99 @@
             <div id="rank-col3" class="flex flex-col items-center justify-start0">
                 <h1 class="font-bold text-center text-white">Para concentrarte al 100</h1>
                 <div id="ranker-1" class="w-auto flex flex-col md:flex-row items-center justify-start mt-7 gap-x-7">
-                    <img id="rank-art" class="w-16 h-16" src="assets/img/album1.png">
+                    <img id="rank-art" class="w-16 h-16 transition transform duration-250 hover:scale-105 hover:shadow-2xl" src="assets/img/album1.png">
                     <p class="text-base text-white text-black">Nombre de playlist</p>
                 </div>
                 <div id="ranker-2" class="w-auto flex flex-col md:flex-row items-center justify-start mt-7 gap-x-7">
-                    <img id="rank-art" class="w-16 h-16" src="assets/img/album1.png">
+                    <img id="rank-art" class="w-16 h-16 transition transform duration-250 hover:scale-105 hover:shadow-2xl" src="assets/img/album1.png">
                     <p class="text-base text-white text-black">Nombre de playlist</p>
                 </div>
                 <div id="ranker-3" class="w-auto flex flex-col md:flex-row items-center justify-start mt-7 gap-x-7">
-                    <img id="rank-art" class="w-16 h-16" src="assets/img/album1.png">
+                    <img id="rank-art" class="w-16 h-16 transition transform duration-250 hover:scale-105 hover:shadow-2xl" src="assets/img/album1.png">
                     <p class="text-base text-white text-black">Nombre de playlist</p>
                 </div>
                 <div id="ranker-4" class="w-auto flex flex-col md:flex-row items-center justify-start mt-7 gap-x-7">
-                    <img id="rank-art" class="w-16 h-16" src="assets/img/album1.png">
+                    <img id="rank-art" class="w-16 h-16 transition transform duration-250 hover:scale-105 hover:shadow-2xl" src="assets/img/album1.png">
                     <p class="text-base text-white text-black">Nombre de playlist</p>
                 </div>
                 <div id="ranker-5" class="w-auto flex flex-col md:flex-row items-center justify-start mt-7 gap-x-7">
-                    <img id="rank-art" class="w-16 h-16" src="assets/img/album1.png">
+                    <img id="rank-art" class="w-16 h-16 transition transform duration-250 hover:scale-105 hover:shadow-2xl" src="assets/img/album1.png">
                     <p class="text-base text-white text-black">Nombre de playlist</p>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <section id="similar-listens" class="w-100 mx-32 my-20">
+        <div id="similar-title" class="text-black font-bold text-3xl text-center mt-32 mb-20">Porque escuchaste...</div>
+
+        <div id="similar-leftart" class="flex flex-row items-center justify-start mt-40 gap-x-24">
+            <div id="similar-listened" class="w-1/5 flex flex-col">
+                <h1 id="similar-listened-title" class="font-semibold text-2xl mb-10">Playlist Oficial Happy</h1>
+                <img id="similar-listened-art" class="w-auto" src="assets/img/album2.png">
+            </div>
+
+            <div id="similar-recomms" class="grid grid-cols-8 mt-14 items-center justify-around gap-x-10 gap-y-16">
+                <img id="similar-listened-art" class="w-32 transition transform duration-250 hover:scale-105 hover:shadow-md transform transition duration-300 hover:opacity-75" src="assets/img/album3.jpg">
+                <img id="similar-listened-art" class="w-32 transition transform duration-250 hover:scale-105 hover:shadow-md transform transition duration-300 hover:opacity-75" src="assets/img/album3.jpg">
+                <img id="similar-listened-art" class="w-32 transition transform duration-250 hover:scale-105 hover:shadow-md transform transition duration-300 hover:opacity-75" src="assets/img/album3.jpg">
+                <img id="similar-listened-art" class="w-32 transition transform duration-250 hover:scale-105 hover:shadow-md transform transition duration-300 hover:opacity-75" src="assets/img/album3.jpg">
+                <img id="similar-listened-art" class="w-32 transition transform duration-250 hover:scale-105 hover:shadow-md transform transition duration-300 hover:opacity-75" src="assets/img/album3.jpg">
+                <img id="similar-listened-art" class="w-32 transition transform duration-250 hover:scale-105 hover:shadow-md transform transition duration-300 hover:opacity-75" src="assets/img/album3.jpg">
+                <img id="similar-listened-art" class="w-32 transition transform duration-250 hover:scale-105 hover:shadow-md transform transition duration-300 hover:opacity-75" src="assets/img/album3.jpg">
+                <img id="similar-listened-art" class="w-32 transition transform duration-250 hover:scale-105 hover:shadow-md transform transition duration-300 hover:opacity-75" src="assets/img/album3.jpg">
+                <img id="similar-listened-art" class="w-32 transition transform duration-250 hover:scale-105 hover:shadow-md transform transition duration-300 hover:opacity-75" src="assets/img/album3.jpg">
+                <img id="similar-listened-art" class="w-32 transition transform duration-250 hover:scale-105 hover:shadow-md transform transition duration-300 hover:opacity-75" src="assets/img/album3.jpg">
+                <img id="similar-listened-art" class="w-32 transition transform duration-250 hover:scale-105 hover:shadow-md transform transition duration-300 hover:opacity-75" src="assets/img/album3.jpg">
+                <img id="similar-listened-art" class="w-32 transition transform duration-250 hover:scale-105 hover:shadow-md transform transition duration-300 hover:opacity-75" src="assets/img/album3.jpg">
+                <img id="similar-listened-art" class="w-32 transition transform duration-250 hover:scale-105 hover:shadow-md transform transition duration-300 hover:opacity-75" src="assets/img/album3.jpg">
+                <img id="similar-listened-art" class="w-32 transition transform duration-250 hover:scale-105 hover:shadow-md transform transition duration-300 hover:opacity-75" src="assets/img/album3.jpg">
+                <img id="similar-listened-art" class="w-32 transition transform duration-250 hover:scale-105 hover:shadow-md transform transition duration-300 hover:opacity-75" src="assets/img/album3.jpg">
+                <img id="similar-listened-art" class="w-32 transition transform duration-250 hover:scale-105 hover:shadow-md transform transition duration-300 hover:opacity-75" src="assets/img/album3.jpg">            
+            </div>
+        </div>
+
+        <hr class="my-32">
+
+        <div id="similar-rightart" class="flex flex-row items-center justify-start gap-x-24">
+            <div id="similar-recomms" class="grid grid-cols-8 mt-14 items-center justify-around gap-x-10 gap-y-16">
+                <img id="similar-listened-art" class="w-32 transition transform duration-250 hover:scale-105 hover:shadow-md transform transition duration-300 hover:opacity-75" src="assets/img/album3.jpg">
+                <img id="similar-listened-art" class="w-32 transition transform duration-250 hover:scale-105 hover:shadow-md transform transition duration-300 hover:opacity-75" src="assets/img/album3.jpg">
+                <img id="similar-listened-art" class="w-32 transition transform duration-250 hover:scale-105 hover:shadow-md transform transition duration-300 hover:opacity-75" src="assets/img/album3.jpg">
+                <img id="similar-listened-art" class="w-32 transition transform duration-250 hover:scale-105 hover:shadow-md transform transition duration-300 hover:opacity-75" src="assets/img/album3.jpg">
+                <img id="similar-listened-art" class="w-32 transition transform duration-250 hover:scale-105 hover:shadow-md transform transition duration-300 hover:opacity-75" src="assets/img/album3.jpg">
+                <img id="similar-listened-art" class="w-32 transition transform duration-250 hover:scale-105 hover:shadow-md transform transition duration-300 hover:opacity-75" src="assets/img/album3.jpg">
+                <img id="similar-listened-art" class="w-32 transition transform duration-250 hover:scale-105 hover:shadow-md transform transition duration-300 hover:opacity-75" src="assets/img/album3.jpg">
+                <img id="similar-listened-art" class="w-32 transition transform duration-250 hover:scale-105 hover:shadow-md transform transition duration-300 hover:opacity-75" src="assets/img/album3.jpg">
+                <img id="similar-listened-art" class="w-32 transition transform duration-250 hover:scale-105 hover:shadow-md transform transition duration-300 hover:opacity-75" src="assets/img/album3.jpg">
+                <img id="similar-listened-art" class="w-32 transition transform duration-250 hover:scale-105 hover:shadow-md transform transition duration-300 hover:opacity-75" src="assets/img/album3.jpg">
+                <img id="similar-listened-art" class="w-32 transition transform duration-250 hover:scale-105 hover:shadow-md transform transition duration-300 hover:opacity-75" src="assets/img/album3.jpg">
+                <img id="similar-listened-art" class="w-32 transition transform duration-250 hover:scale-105 hover:shadow-md transform transition duration-300 hover:opacity-75" src="assets/img/album3.jpg">
+                <img id="similar-listened-art" class="w-32 transition transform duration-250 hover:scale-105 hover:shadow-md transform transition duration-300 hover:opacity-75" src="assets/img/album3.jpg">
+                <img id="similar-listened-art" class="w-32 transition transform duration-250 hover:scale-105 hover:shadow-md transform transition duration-300 hover:opacity-75" src="assets/img/album3.jpg">
+                <img id="similar-listened-art" class="w-32 transition transform duration-250 hover:scale-105 hover:shadow-md transform transition duration-300 hover:opacity-75" src="assets/img/album3.jpg">
+                <img id="similar-listened-art" class="w-32 transition transform duration-250 hover:scale-105 hover:shadow-md transform transition duration-300 hover:opacity-75" src="assets/img/album3.jpg">            
+            </div>
+
+            <div id="similar-listened" class="w-1/5 flex flex-col">
+                <h1 id="similar-listened-title" class="font-semibold text-2xl mb-10">Playlist Oficial Happy</h1>
+                <img id="similar-listened-art" class="w-auto" src="assets/img/album2.png">
+            </div>
+        </div>     
+           
+    </section>
+
+    <footer>
+        <div class="bg-gray-800 h-10">
+            <div class="flex flex-row items-center justify-between mx-32">
+                <a href="#" class="text-white">Aviso de privacidad</a>
+                <span>
+                    <a href="https://www.facebook.com/" target="_blank" class="font-semibold text-white transform transition duration-200 hover:text-pink-500 pl-3"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="https://twitter.com/" target="_blank"  class="font-semibold text-white transform transition duration-200 hover:text-pink-500 pl-3"><ion-icon name="logo-twitter"></ion-icon></a>
+                </span>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
